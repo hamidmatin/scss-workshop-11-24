@@ -1,0 +1,65 @@
+$primary: #ff4a52;
+$secondary: #1ec6b6;
+$dark: #040e27;
+$black: #000000;
+$white: #ffffff;
+$gray-9: lighten($black, 10%);
+$gray-8: lighten($black, 20%);
+$gray-7: lighten($black, 30%);
+$gray-6: lighten($black, 40%);
+$gray-5: lighten($black, 50%);
+$gray-4: lighten($black, 60%);
+$gray-3: lighten($black, 70%);
+$gray-2: lighten($black, 80%);
+$gray-1: lighten($black, 90%);
+
+$main-font-family: arial, sans-serif;
+$main-font-size: 16px;
+
+$transition-base: all 0.3s !default;
+
+// ########### Maps ############
+$spacer-base: 1rem;
+$spacers: (
+  1: $spacer-base / 4,
+  2: $spacer-base / 2,
+  3: $spacer-base,
+  4: $spacer-base * 1.5,
+  5: $spacer-base * 2
+);
+
+$space-properteis:(
+  'p' : 'padding',
+  'm' : 'margin'
+);
+$space-sides: (
+  't': 'top',
+  'b': 'bottom',
+  's': 'left',
+  'e': 'right',
+);
+
+$colors: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'dark': $dark,
+  'black': $black,
+  'gray': $gray-9,
+  'light': $gray-5,
+);
+
+$media-brak-points: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px
+);
+$column-count: 12;
+
+$countainer-sizes: (
+  'sm': 570px,
+  'md': 750px,
+  'lg': 980px,
+  'xl': 1150px
+);
+

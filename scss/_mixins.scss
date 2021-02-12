@@ -1,0 +1,5 @@
+@mixin spacer($property-label, $property, $side-label, $side, $size-label, $size) {
+  .#{$property-label}#{$side-label}-#{$size-label}{
+    #{$property}-#{$side}: $size;
+  }
+}

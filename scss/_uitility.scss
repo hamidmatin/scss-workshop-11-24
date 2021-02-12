@@ -1,0 +1,42 @@
+.text-start{
+  text-align: start;
+}
+
+// @include spacer('p', 'padding', 't', 'top', '1', '8px');
+// @include spacer('p', 'padding', 'b', 'bottom', '1', '8px');
+// @include spacer('p', 'padding', 's', 'left', '1', '8px');
+// @include spacer('p', 'padding', 'e', 'right', '1', '8px');
+
+@each $p-l, $p in $space-properteis {
+  @each $s-l, $s in $space-sides {
+    @each $space-l, $space in $spacers {
+      @include spacer($p-l, $p, $s-l, $s, $space-l, $space);
+    }
+  }
+}
+
+@each $key, $value in $colors {
+  .bg-#{$key}{
+    background-color: $value;
+  }
+  .text-#{$key}{
+    color: $value;
+  }
+}
+
+
+.rounded-sm{
+  border-radius: .2rem;
+}
+.rounded{
+  border-radius: .3rem;
+}
+.rounded-lg{
+  border-radius: .4rem;
+}
+.rounded-circle{
+  border-radius: 100%;
+}
+.rounded-pill{
+  border-radius: 500rem;
+}
