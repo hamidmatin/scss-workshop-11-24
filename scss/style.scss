@@ -1,6 +1,9 @@
-@import 'variables';
-@import 'mixins';
-@import 'reset';
-@import 'grid';
-@import 'uitility';
-@import 'button';
+@import 'base-style/variables';
+@import 'base-style/mixins';
+@import 'base-style/reset';
+@import 'base-style/grid';
+@import 'base-style/uitility';
+@import 'base-style/button';
+
+@import 'nav';
+@import 'banner';

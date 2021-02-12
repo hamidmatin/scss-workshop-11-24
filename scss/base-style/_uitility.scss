@@ -23,7 +23,50 @@
     color: $value;
   }
 }
+.d-none{
+  display: none !important;
+}
+@each $name, $size in $media-brak-points{
+  @media screen and (min-width: $size){
+    .d-#{$name}-none{
+      display: none !important;
+    }
+  }
+}
 
+.d-flex{
+  display: flex !important;
+}
+@each $name, $size in $media-brak-points{
+  @media screen and (min-width: $size){
+    .d-#{$name}-flex{
+      display: flex !important;
+    }
+  }
+}
+.d-block{
+  display: block !important;
+}
+@each $name, $size in $media-brak-points{
+  @media screen and (min-width: $size){
+    .d-#{$name}-block{
+      display: block !important;
+    }
+  }
+}
+
+
+.align-items-start{
+  align-items: flex-start !important;
+}
+
+.align-items-end{
+  align-items: flex-end !important;
+}
+
+.align-items-center{
+  align-items: center !important;
+}
 
 .rounded-sm{
   border-radius: .2rem;
