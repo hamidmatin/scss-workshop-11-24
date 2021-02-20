@@ -83,3 +83,11 @@
 .rounded-pill{
   border-radius: 500rem;
 }
+
+.input-control{
+  display: block;
+  width: 100%;
+  padding: 15px;
+  outline: none;
+  @include border()
+}

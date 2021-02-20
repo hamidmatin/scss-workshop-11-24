@@ -1,8 +1,12 @@
+$navbar-bg-color: adjust-color($color: $white, $alpha: -.7);
 .navbar {
-  background-color: $white;
+  background-color: $navbar-bg-color;
   display: flex;
   justify-content: space-between;
   padding-left: 35px;
+  position: fixed;
+  z-index: 100;
+  width: 100%;
 
   .brand {
     width: 200px;
@@ -17,21 +21,113 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 5%;
+    right: 5%;
+    z-index: 1000;
+    background-color: #fff;
 
+    @media screen and (min-width: map-get($map: $media-brak-points, $key: 'lg')) {
+      position: static;
+      display: flex;
+      flex-direction: row;
+      background-color: transparent;
+    }
     li {
-      margin-right: 35px;
+      position: relative;
+      // @media screen and (min-width: map-get($map: $media-brak-points, $key: 'xl')) {
+      //   margin-right: 35px;
+      // }
+
+      &:hover > ul {
+        visibility: visible;
+        opacity: 1;
+        max-height: 600px;
+        @media screen and (min-width: map-get($map: $media-brak-points, $key: 'lg')) {
+          transform: translateY(0);
+        }
+      }
     }
 
     a {
       color: $black;
       display: inline-block;
       transition: $transition-base;
+      padding: 5px 10px;
+      position: relative;
 
+      &::before{
+        content: '';
+        position: absolute;
+        background-color: $secondary;
+        height: 2px;
+        top: 100%;
+        left: 7%;
+        right: 7%;
+        transition: $transition-base;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(5px);
+      }
       &:hover {
         color: $secondary;
+        &::before{
+          visibility: visible;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      &.has-submenu {
+        display: flex;
+        justify-content: space-between;
+        &::after {
+          content: '\f067';
+          @media screen and (min-width: map-get($map: $media-brak-points, $key: 'lg')) {
+            content: '\f107';
+          }
+          display: inline-block;
+          font: normal normal normal 14px/1 FontAwesome;
+          font-size: inherit;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+        }
       }
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 1000;
+      padding-left: 30px;
+      visibility: hidden;
+      opacity: 0;
+      max-height: 0;
+      transition: $transition-base;
+      @media screen and (min-width: map-get($map: $media-brak-points, $key: 'lg')) {
+        position: absolute;
+        padding-left: 0;
+        left: 0;
+        top: 100%;
+        padding-top: 20px;
+        transform: translateY(-30%);
+      }
+      a {
+        width: 100%;
+        padding: 10px 15px;
+        white-space: nowrap;
+        min-width: 100px;
+        background-color: #fff;
+      }
+    }
+  }
+
+  #menu-selector:checked + .nav {
+    display: flex !important;
   }
 
   .socials {
@@ -60,17 +156,18 @@
     text-align: center;
     line-height: 63px;
     width: 100px;
-    @media screen and (min-width: map-get($map: $media-brak-points, $key: 'lg')){
+    @media screen and (min-width: map-get($map: $media-brak-points, $key: 'lg')) {
       line-height: 100px;
     }
   }
 
-  .toggle-menu{
+  .toggle-menu {
     color: $black;
     display: block;
     width: 100px;
     text-align: center;
     line-height: 63px;
     font-size: 2em;
+    cursor: pointer;
   }
 }

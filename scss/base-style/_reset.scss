@@ -6,6 +6,7 @@ html{
 
 body{
   margin: 0;
+  background-color: lighten($color: $gray-1, $amount: 7%);
 }
 
 a{

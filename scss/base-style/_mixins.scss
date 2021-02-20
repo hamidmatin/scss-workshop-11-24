@@ -3,3 +3,7 @@
     #{$property}-#{$side}: $size;
   }
 }
+
+@mixin border($color: $gray-2, $width: 1px, $style: solid) {
+  border: $color $width $style;
+}

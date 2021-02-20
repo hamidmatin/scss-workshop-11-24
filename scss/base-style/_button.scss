@@ -30,4 +30,9 @@
       background-color: $primary;
     }
   }
+
+  &.btn-block{
+    display: block;
+    width: 100%;
+  }
 }

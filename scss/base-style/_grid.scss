@@ -7,6 +7,8 @@
 [class*='col-'] {
   width: 100%;
   flex: 0 0 100%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @each $name, $size in $media-brak-points {

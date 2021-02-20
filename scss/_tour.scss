@@ -1,0 +1,48 @@
+.tour {
+  border-radius: 6px;
+  transition: $transition-base;
+  &:hover {
+    box-shadow: 0 2px 10px 4px #ccc;
+  }
+  img {
+    display: block;
+    width: 100%;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+  }
+
+  &-info {
+    padding: 25px 20px;
+    h3 {
+      color: $black;
+    }
+    p {
+      color: $gray-4;
+    }
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-star {
+        i {
+          font-size: 12px;
+          color: #fdae5c;
+        }
+        a{
+          color: $gray-4;
+          font-size: 14px;
+        }
+      }
+
+      &-days{
+        font-size: 14px;
+        color: $gray-4;
+        a{
+          color: inherit
+
+        }
+      }
+    }
+  }
+}
