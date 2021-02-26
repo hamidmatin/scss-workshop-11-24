@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travello English</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <style>
+      :root {
+        --my-color: rgb(211, 211, 106);
+        --base-padding: 32px;
+      }
+
+      body {
+        /* background-color: var(--bs-purple); */
+        background: var(--bs-gradient);
+        padding: var(--base-padding);
+      }
+      .test-variable{
+        padding: var(--base-padding);
+        --color: red;
+        color : var(--color);
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="d-flex justify-content-around">
+        <button type="button" class="btn btn-primary position-relative">
+          Mails
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary"
+            >+99 <span class="visually-hidden">unread messages</span></span
+          >
+        </button>
+
+        <button type="button" class="btn btn-dark position-relative">
+          Marker
+          <svg
+            width="1em"
+            height="1em"
+            viewBox="0 0 16 16"
+            class="position-absolute top-100 start-50 translate-middle mt-1 bi bi-caret-down-fill"
+            fill="#212529"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M7.247 11.14L2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+            />
+          </svg>
+        </button>
+
+        <button type="button" class="btn btn-primary position-relative">
+          Alerts
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge border border-light rounded-circle bg-danger p-2"
+            ><span class="visually-hidden">unread messages</span></span
+          >
+        </button>
+      </div>
+      <h2 class="visually-hidden">Title for screen readers</h2>
+      <a class="visually-hidden-focusable" href="#content"
+        >Skip to main content</a
+      >
+      <div class="visually-hidden-focusable">
+        A container with a <a href="#">focusable element</a>.
+      </div>
+    </div>
+
+    <p class="test-variable" style="--color: hotpink">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat ullam
+      tempore, omnis quis nulla fugit impedit distinctio inventore deserunt eius
+      ut, numquam laboriosam tempora aut quas. Distinctio debitis velit impedit.
+    </p>
+
+    <p class="test-variable" style="--color: green">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat ullam
+      tempore, omnis quis nulla fugit impedit distinctio inventore deserunt eius
+      ut, numquam laboriosam tempora aut quas. Distinctio debitis velit impedit.
+    </p>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+body{
+  direction: ltr;
+}
+/*rtl:begin:options: {
+    "autoRename": true,
+    "stringMap":[ {
+      "name"    : "prev-next",
+      "search"  : ["prev", "Prev", "PREV"],
+      "replace" : ["next", "Next", "NEXT"],
+      "options" : {"ignoreCase":false}
+  } ]
+} */
+.slide-prev, .Slide-Prev, .SLIDE-PREV {
+  content: '<';
+}
+.slide-next, .Slide-Next, .SLIDE-NEXT {
+  content: '>';
+}
+/*rtl:end:options*/
+
+/***************** Control Directives ************/
+/*************** ignore ***************/
+
+/**** Self closing *******/
+.code {
+  /*rtl:ignore*/
+  direction:ltr;
+  /*rtl:ignore*/
+  text-align:left;
+}
+
+.code1 {
+  /*rtl:begin:ignore*/
+  direction:ltr;
+  text-align:left;
+  /*rtl:end:ignore*/
+}
+
+/*rtl:begin:ignore*/
+.code2 {
+  direction:ltr;
+  text-align:left;
+}
+/*rtl:end:ignore*/
+
+/********** create just in rtl file ***********/
+/*rtl:raw:
+#example {
+    border-radius: 25px 0 0 25px;
+}
+*/
+
+/************ Remove Property in RTL ***********/
+#div1 {
+  /*rtl:remove*/
+  direction: rtl;
+  /*rtl:remove*/
+  text-align: right;
+  padding: 10px;
+}
+
+#div2 {
+  /*rtl:begin:remove*/
+  direction: rtl;
+  text-align: right;
+  /*rtl:end:remove*/
+  padding: 10px;
+}
+
+/********** Reanme Class Name ***********/
+/*rtl:rename*/
+.float-left {
+  float: left;
+}
+/****** in bootstrap ******/
+.float-start{
+  float: left;
+}
+.float-end{
+  float: right;
+}
+
+/*********** Value Directives **************/
+
+/*********** Append ***********/
+.sample {
+  transform:rotate(45deg) /*rtl:append:scaleX(-1)*/;
+}
+
+/******** prepend **************/
+.sample {
+  transform: rotate(45deg) /*rtl:prepend:scaleX(-1) */ translateX(20px) ;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif /*rtl:prepend:iran-sans, */;
+}
+/******** insert **************/
+.sample {
+  transform: rotate(45deg) /*rtl:insert:scaleX(-1)*/ translateX(20px) ;
+}
+
+
+/********** replace **********/
+body{
+  font-size: 16px /*rtl:14px*/;
+}
+
+/********* Ignore ***********/
+.code {
+  direction:ltr/*rtl:ignore*/;
+}
+

@@ -1,0 +1,85 @@
+body{
+  direction: rtl;
+}
+.slide-next, .Slide-Next, .SLIDE-NEXT {
+  content: '<';
+}
+.slide-prev, .Slide-Prev, .SLIDE-PREV {
+  content: '>';
+}
+
+/***************** Control Directives ************/
+/*************** ignore ***************/
+
+/**** Self closing *******/
+.code {
+  direction:ltr;
+  text-align:left;
+}
+
+.code1 {
+  direction:ltr;
+  text-align:left;
+}
+.code2 {
+  direction:ltr;
+  text-align:left;
+}
+
+/********** create just in rtl file ***********/
+#example {
+    border-radius: 25px 0 0 25px;
+}
+
+/************ Remove Property in RTL ***********/
+#div1 {
+  padding: 10px;
+}
+
+#div2 {
+  padding: 10px;
+}
+
+/********** Reanme Class Name ***********/
+.float-right {
+  float: right;
+}
+/****** in bootstrap ******/
+.float-start{
+  float: right;
+}
+.float-end{
+  float: left;
+}
+
+/*********** Value Directives **************/
+
+/*********** Append ***********/
+.sample {
+  transform:rotate(45deg) scaleX(-1);
+}
+
+/******** prepend **************/
+.sample {
+  transform: scaleX(-1) rotate(45deg)  translateX(20px) ;
+}
+
+body{
+  font-family: iran-sans, Arial, Helvetica, sans-serif ;
+}
+/******** insert **************/
+.sample {
+  transform: rotate(45deg) scaleX(-1) translateX(20px) ;
+}
+
+
+/********** replace **********/
+body{
+  font-size: 14px;
+}
+
+/********* Ignore ***********/
+.code {
+  direction:ltr;
+}
+
