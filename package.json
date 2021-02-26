@@ -1,0 +1,26 @@
+{
+  "name": "scss-workshop-11-24",
+  "version": "1.0.0",
+  "description": "مدرس دوره های برنامه نویسی سی شارپ و فرانت اند",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hamidmatin/scss-workshop-11-24.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hamidmatin/scss-workshop-11-24/issues"
+  },
+  "homepage": "https://github.com/hamidmatin/scss-workshop-11-24#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2"
+  }
+}
