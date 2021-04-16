@@ -1,12 +1,264 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>سفر</title>
-</head>
-<body>
-  <h1 hidden>سفر</h1>
-</body>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nexon</title>
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+    <link rel="stylesheet" href="/css/custom-bootstrap.min.rtl.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">NEXON</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                بازیها
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="#suport" class="nav-link">پشتیبانی</a>
+            </li>
+            <li class="nav-item">
+              <a href="#login" class="nav-link">ورود</a>
+            </li>
+            <li class="nav-item">
+              <a href="#crete-account" class="nav-link">سسیس</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="btn btn-primary text-white">ساخت حساب</a>
+            </li>
+            <li class="nav-item">
+              <a href="/en" class="btn btn-success text-white">English</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="/images/210218_mabi_februaryupdate_hero-banner_1530x660.png"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/210310-maple-springblossoms-hero-1530x660.jpg"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Spring Blossoms Update - Now Live!</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="/images/default-hero-banner.png"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+      <div class=" mt-8">
+        <input id="search" type="text" class="form-control w-25 text-dark" placeholder="Search Genre">
+      </div>
+      <div class="d-flex justify-content-between mt-10">
+        <h3>All Games</h3>
+        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active rounded-pill btn btn-outline-primary"
+              id="pills-all-games-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-all-games"
+              type="button"
+              role="tab"
+              aria-controls="pills-all-games"
+              aria-selected="true"
+            >
+              <i class="uil uil-game-structure"></i>
+              All Games
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-pill btn btn-outline-primary"
+              id="pills-window-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-window"
+              type="button"
+              role="tab"
+              aria-controls="pills-window"
+              aria-selected="false"
+            >
+              <i class="uil uil-windows"></i>
+              Windows
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-pill btn btn-outline-primary"
+              id="pills-ios-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-ios"
+              type="button"
+              role="tab"
+              aria-controls="pills-ios"
+              aria-selected="false"
+            >
+              <i class="uil uil-apple"></i>
+              ios
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link rounded-pill btn btn-outline-primary"
+              id="pills-android-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-android"
+              type="button"
+              role="tab"
+              aria-controls="pills-android"
+              aria-selected="false"
+            >
+              <i class="uil uil-android"></i>
+              android
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-all-games" role="tabpanel" aria-labelledby="pills-all-games-tab">
+          <!-- <div class="d-flex flex-wrap">
+            <div class="game">
+              <div class="card">
+                <img src="//nxl.nxfs.nexon.com/media/4908/en_dr_main_card.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">name</h5>
+                  <p class="card-text">Genre</p>
+                  <p class="card-text">Plarform</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="tab-pane fade" id="pills-window" role="tabpanel" aria-labelledby="pills-window-tab">
+          <h3>Window</h3>
+        </div>
+        <div class="tab-pane fade" id="pills-ios" role="tabpanel" aria-labelledby="pills-ios-tab">
+          <h3>ios</h3>
+        </div>
+        <div class="tab-pane fade" id="pills-android" role="tabpanel" aria-labelledby="pills-android-tab">
+          <h3>android</h3>
+        </div>
+      </div>
+    </div>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js"></script>
+
+    <script>
+      console.log(window)
+      console.log(navigator)
+      // window.onhashchange = function(){
+      //   alert('sds')
+      // }
+    </script>
+  </body>
 </html>
